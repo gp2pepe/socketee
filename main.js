@@ -8,46 +8,52 @@ let win
 function createWindow () {
    win = new BrowserWindow({
     width: 600,
-    height: 700,
+    height: 840,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
-      contextIsolation: false
-    }
+      contextIsolation: false,
+      frame: false
+    },
+    icon: path.join(__dirname, 'assets/icons/png/64x64.png')
   })
-
+  win.setMenuBarVisibility(false)
   win.loadFile('index.html')
 }
 
+//Connects to websocket
 ipcMain.on('connect',  (event,args) => {
-  client = new WebSocket(args);
-  var mensaje = "";
-  client.onopen = () => {
-    mensaje = "Connected";
-    win.webContents.send('repuestaConn',mensaje);
+  var mensaje = "URL format incorrect";
+  try{
+    client = new WebSocket('ws://' + args);
+    client.onopen = () => {
+      mensaje = "Connected";
+      win.webContents.send('responseConn',mensaje);
 
-  }
+    }
 
-  client.onerror = (error) => {
-    mensaje = `WebSocket error: ${error}`;
-    win.webContents.send('repuestaConn',mensaje);
+    client.onerror = (error) => {
+      mensaje = 'WebSocket error - check URL or Server ';
+      win.webContents.send('responseConn',mensaje);
 
-  }
-
-});
-
-
-ipcMain.on('send', function (){
- // Wait for the client to connect using async/await
-  //await new Promise(resolve => client.once('open', resolve));
-    console.log("Voy a mandar mensaje")
-    client.send('Message From Client') 
-  client.onmessage = (e) => {
-    client.log(e.data)
+    }
+  }catch(error){
+    win.webContents.send('responseConn',"Wrong URL format");
   }
 });
 
+//Send message to the server and retrive response
+ipcMain.on('send', (event,args) => {
 
+    try{
+      console.log("Sending Message: " + args);
+      client.send(args);
+      client.onmessage = (e) => {
+        win.webContents.send('responseMessage',e.data);
+      }
+    }catch (error){
+      win.webContents.send('responseMessage',"Error sending message: " + error);
+    }
+});
 
 
 app.whenReady().then(() => {

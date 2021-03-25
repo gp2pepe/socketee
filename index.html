@@ -2,14 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sockte - Websocket Testing made easy</title>
+    <title>Socketee - Websocket Testing made easy</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <style>
       html, body {
-        display: flex;
         justify-content: center;
         font-family: Roboto, Arial, sans-serif;
         font-size: 15px;
@@ -32,13 +31,16 @@
         display: inline-block;
         border: 1px solid #ccc;
         box-sizing: border-box;
+        min-height: 140px;
       }
-      .icon {
+      .logo {
         font-size: 110px;
         display: flex;
         justify-content: center;
-        color: #4286f4;
+        background-color: #47566e;
+        box-shadow: 0 0 3px #111;
       }
+  
       button {
         background-color: #4286f4;
         color: white;
@@ -47,6 +49,7 @@
         border: none;
         cursor: grab;
         width: 48%;
+        max-width: 200px;
       }
       h1 {
         text-align:center;
@@ -57,16 +60,20 @@
       }
       .formcontainer {
         text-align: center;
-        margin: 24px 50px 12px;
+        margin: 24px 25px 12px;
       }
       .container {
-        padding: 16px 0;
+        padding: 5px 0;
         text-align:left;
       }
       span.psw {
         float: right;
         padding-top: 0;
         padding-right: 15px;
+      }
+      #state-con{
+        color: crimson;
+        font-weight: bold;
       }
       /* Change styles for span on extra small screens */
       @media screen and (max-width: 300px) {
@@ -79,25 +86,34 @@
 </head>
 <body style="background: white;">
     <div id="divForm" >
-        <h1>Sockte </h1>
-        <div class="icon">
-          <i class="fas fa-user-circle"></i>
+        <div class="logo">
+          <img src="assets/logo/png/logo.png" alt="Socketee">
         </div>
         <div class="formcontainer">
         <div class="container">
-          <label for="url"><strong>Url</strong></label>
-          <input type="text" placeholder="Enter Websocket URL" name="url" required>
+          <label for="url"><strong>WebSocket Url</strong></label>
+          <input type="text" placeholder="Example: localhost:8080/websocket" name="url" id="url" required>
         </div>
         <button id='btnConnect'><strong>Connect</strong></button>
-        <div class="container">
+        <div class="container" style="margin-top: 10px;">
           <label for="Connection_State">Connection State: </label>
           <span id="state-con">Not connected</span>
           <br><br>
           <label for="text"><strong>Text to send</strong></label><br>
-          <textarea placeholder="Message to send" rows="5"></textarea>        
+          <textarea id="textSend"
+placeholder='Message to send - JSon Example:
+{
+  "operation":"someOp",
+  "name":"Cube",
+  "positionX":100,
+  "positionY":100
+}' rows="5"></textarea>        
         </div>
-          <button id="btnSend"><strong>Send</strong></button>
-
+        <button id="btnSend" disabled style="opacity: 0.8;"><strong>Send</strong></button>
+        <div class="container">
+          <label for="text"><strong>Server response</strong></label><br>
+          <textarea id="textResponse" placeholder=". . ." rows="5"></textarea>        
+        </div>
       </div>   
 
     <p>
