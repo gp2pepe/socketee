@@ -3,9 +3,10 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const WebSocket = require('ws')
 var client 
+let win
 
 function createWindow () {
-  const win = new BrowserWindow({
+   win = new BrowserWindow({
     width: 600,
     height: 700,
     webPreferences: {
@@ -18,19 +19,23 @@ function createWindow () {
   win.loadFile('index.html')
 }
 
-ipcMain.on('connect', function (){
-  console.log("Me voy a conectar");
-  client = new WebSocket('ws://34.123.123.107:8082/web-socket    ');
- 
-  client.onopen = function() {
-    return 'Open';
+ipcMain.on('connect',  (event,args) => {
+  client = new WebSocket(args);
+  var mensaje = "";
+  client.onopen = () => {
+    mensaje = "Connected";
+    win.webContents.send('repuestaConn',mensaje);
+
   }
+
   client.onerror = (error) => {
-    client.log(`WebSocket error: ${error}`)
+    mensaje = `WebSocket error: ${error}`;
+    win.webContents.send('repuestaConn',mensaje);
+
   }
-   
 
 });
+
 
 ipcMain.on('send', function (){
  // Wait for the client to connect using async/await
@@ -40,7 +45,6 @@ ipcMain.on('send', function (){
   client.onmessage = (e) => {
     client.log(e.data)
   }
-
 });
 
 

@@ -43,14 +43,14 @@
         background-color: #4286f4;
         color: white;
         padding: 14px 0;
-        margin: 10px 0;
+        margin: 0 auto;
         border: none;
         cursor: grab;
         width: 48%;
       }
       h1 {
         text-align:center;
-        fone-size:18;
+        font-size:18;
       }
       button:hover {
         opacity: 0.8;
@@ -70,9 +70,10 @@
       }
       /* Change styles for span on extra small screens */
       @media screen and (max-width: 300px) {
-      span.psw {
-        display: block;
-        float: none;
+        span.psw {
+          display: block;
+          float: none;
+        }
       }
     </style>
 </head>
@@ -86,21 +87,26 @@
         <div class="container">
           <label for="url"><strong>Url</strong></label>
           <input type="text" placeholder="Enter Websocket URL" name="url" required>
-          <button id='btnConnect'><strong>Connect</strong></button>
-          <br>
+        </div>
+        <button id='btnConnect'><strong>Connect</strong></button>
+        <div class="container">
+          <label for="Connection_State">Connection State: </label>
+          <span id="state-con">Not connected</span>
+          <br><br>
           <label for="text"><strong>Text to send</strong></label><br>
           <textarea placeholder="Message to send" rows="5"></textarea>        
-          </div>
+        </div>
           <button id="btnSend"><strong>Send</strong></button>
 
       </div>   
 
     <p>
 
-        Estado conexion: <span id="estado-con"></span>.
 
     </p>
 </body>
-<script src = "./script.js" ></script>
+<script>
+    require('./renderer.js');
+ </script>
 
 </html>
