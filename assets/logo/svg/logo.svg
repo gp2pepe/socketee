@@ -270,17 +270,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6086679"
-     inkscape:cx="290.16918"
-     inkscape:cy="774.72775"
+     inkscape:zoom="0.95330254"
+     inkscape:cx="280.60336"
+     inkscape:cy="794.49592"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-height="1043"
      inkscape:window-x="1920"
-     inkscape:window-y="1107"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -301,18 +301,19 @@
     <g
        id="g1555"
        style="filter:url(#filter2089)"
-       transform="translate(12.211538,-11.281135)"
+       transform="matrix(2.6806112,0,0,3.6777792,-75.332845,-220.60498)"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png">
       <rect
-         ry="5.3453903"
+         ry="1.453429"
          y="77.838989"
          x="42.228584"
          height="28.865108"
          width="38.754082"
          id="rect815"
          style="fill:#000000;fill-opacity:1;stroke-width:0.26458332"
-         rx="5.3453903" />
+         rx="1.9940941" />
       <text
          transform="matrix(0.59189239,0,0,0.59189239,18.010961,33.327337)"
          id="text834"
@@ -338,12 +339,12 @@
     <g
        id="g1555-1"
        style="fill:#28170b;filter:url(#filter1976)"
-       transform="translate(13.004012,-11.281135)"
+       transform="matrix(2.6764837,0,0,3.8061056,-71.590549,-230.67094)"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <rect
-         rx="5.3453903"
-         ry="5.3453903"
+         rx="1.997169"
+         ry="1.4044253"
          y="77.838989"
          x="42.228584"
          height="28.865108"
@@ -374,10 +375,11 @@
     </g>
     <g
        id="g6447"
-       transform="matrix(-1.1633303,0,0,-1.1633303,109.84876,169.4333)"
-       style="filter:url(#filter6839);opacity:0.85"
+       transform="matrix(-3.2618602,0,0,-3.2618602,187.65164,365.05246)"
+       style="opacity:0.85;filter:url(#filter6839)"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png">
       <path
          inkscape:transform-center-y="-0.5820696"
          inkscape:transform-center-x="-0.019776703"
@@ -407,10 +409,11 @@
     </g>
     <g
        id="g6443"
-       transform="matrix(1.1862847,0,0,1.1862847,28.98213,-0.31671891)"
-       style="filter:url(#filter6831);opacity:0.85"
+       transform="matrix(3.326222,0,0,3.326222,-39.090169,-110.90937)"
+       style="opacity:0.85;filter:url(#filter6831)"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png">
       <path
          inkscape:transform-center-y="-0.5820696"
          inkscape:transform-center-x="-0.019776703"
@@ -440,29 +443,32 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.31403685px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10785092"
-       x="64.442024"
-       y="74.83168"
+       style="font-style:normal;font-weight:normal;font-size:12.09612179px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.30240303"
+       x="66.270699"
+       y="93.864197"
        id="text6899"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"><tspan
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png"><tspan
          sodipodi:role="line"
          id="tspan6897"
-         x="64.442024"
-         y="74.83168"
-         style="fill:#53fef9;fill-opacity:1;stroke-width:0.10785092">ocketee</tspan></text>
+         x="66.270699"
+         y="93.864197"
+         style="fill:#53fef9;fill-opacity:1;stroke-width:0.30240303">ocketee</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.31403685px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#420000;fill-opacity:1;stroke:none;stroke-width:0.10785092;filter:url(#filter6921)"
        x="61.791016"
-       y="74.759621"
+       y="72.642952"
        id="text6899-5"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"><tspan
+       inkscape:export-ydpi="96"
+       transform="matrix(2.8038986,0,0,2.8038986,-115.90193,-110.02132)"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png"><tspan
          sodipodi:role="line"
          id="tspan6897-3"
          x="61.791016"
-         y="74.759621"
+         y="72.642952"
          style="fill:#420000;fill-opacity:1;stroke-width:0.10785092">S</tspan></text>
   </g>
 </svg>
