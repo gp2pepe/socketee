@@ -1,0 +1,4 @@
+node_modules
+dist
+.vscode
+workspace.code-workspace
