@@ -5,11 +5,17 @@ summary: WebSocket test as a client # 79 char long summary
 description: |
   Small electron app to test Websocket as a client
 
-grade: stable # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+license: MIT
 
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+
+architectures:
+  - build-on: amd64
+
+ 
 parts:
-  my-part:
-    # See 'snapcraft plugins'
+  so:
+    source: .
     plugin: npm
-    source: https://github.com/gp2pepe/socketee.git
+    npm-node-version: 10.19.0
