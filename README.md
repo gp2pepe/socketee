@@ -5,6 +5,14 @@ Small electron app to test Websocket as a client
 <a href="https://snapcraft.io/socketee">
   <img alt="socketee" src="https://snapcraft.io/socketee/badge.svg" />
 </a>
+
+<h3>Build - Test</h3>
+npm install <br>
+npm start
+
+<h4>To generate snap:</h4>
+npm run dist
+
 <h3>Image</h3>
 
 ![Captura de pantalla de 2021-03-25 20-01-41](https://user-images.githubusercontent.com/9892777/112703665-8abf2580-8e76-11eb-85b2-b1ec8965c271.png)
