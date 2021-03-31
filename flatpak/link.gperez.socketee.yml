@@ -35,7 +35,7 @@ modules:
     build-options:
       env:
         # Need this for electron-download to find the cached electron binary
-        electron_config_cache: /run/build/electron-sample-app/npm-cache
+        electron_config_cache: /run/build/socketee/npm-cache
     buildsystem: simple
     sources:
       - type: archive
