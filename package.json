@@ -8,13 +8,13 @@
         "start": "electron .",
         "dist": "electron-builder --linux snap"
     },
-    "repository": "https://github.com/gp2pepe/socketee",  
+    "repository": "https://github.com/gp2pepe/socketee",
     "keywords": [
         "socketee",
         "websocket",
         "test",
         "client"
-      ],
+    ],
     "license": "MIT License",
     "devDependencies": {
         "electron": "^12.0.1",

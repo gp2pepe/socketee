@@ -2,3 +2,5 @@ node_modules
 dist
 .vscode
 workspace.code-workspace
+flatpak/build
+flatpak/.flatpak-builder
