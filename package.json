@@ -1,26 +1,73 @@
 {
-    "name": "socketee",
-    "version": "0.1.0",
-    "author": "Gabriel Pérez",
-    "description": "Small electron app to test Websocket as a client",
-    "main": "main.js",
-    "scripts": {
-        "start": "electron .",
-        "dist": "electron-builder --linux snap"
-    },
-    "repository": "https://github.com/gp2pepe/socketee",
-    "keywords": [
-        "socketee",
-        "websocket",
-        "test",
-        "client"
-    ],
-    "license": "MIT License",
-    "devDependencies": {
-        "electron": "^12.0.1",
-        "electron-builder": "^22.10.5"
-    },
-    "dependencies": {
-        "ws": "^7.4.4"
+  "name": "socketee",
+  "version": "0.2.0",
+  "author": "Gabriel Pérez",
+  "description": "Small electron app to test Websocket as a client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "dist": "electron-builder --linux snap",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": "https://github.com/gp2pepe/socketee",
+  "keywords": [
+    "socketee",
+    "websocket",
+    "test",
+    "client"
+  ],
+  "license": "MIT License",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^12.0.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.6.0",
+    "ws": "^7.4.4"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "socketee"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "options": {
+              "maintainer": "Gabriel Pérez",
+              "homepage": "http://gperez.link",
+              "icon": "icon.png",
+              "categories": "Development"
+            }
+          }
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
     }
+  },
+  "files": [
+    "**/*",
+    "!${.vscode/*}",
+    "!flatpak"
+  ]
 }

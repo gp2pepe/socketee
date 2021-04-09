@@ -4,3 +4,4 @@ dist
 workspace.code-workspace
 flatpak/build
 flatpak/.flatpak-builder
+out/

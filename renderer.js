@@ -1,8 +1,8 @@
 const ipc = require('electron').ipcRenderer;
+window.$ = window.jQuery = require('jquery'); 
+require('./lib/jquery.jsonPresenter.js');
 
 let connMessage = document.querySelector('#state-con');
-let responseArea = document.querySelector('#textResponse');
-
 
 document.getElementById('btnConnect').addEventListener('click', function(e){
     ipc.send('connect',document.getElementById('url').value);
@@ -30,5 +30,9 @@ ipc.on('responseConn', (event, args) => {
 });
 
 ipc.on('responseMessage', (event, args) => {
-    responseArea.innerHTML = args;
+    var response= JSON.parse(args);
+    $('#textResponse').jsonPresenter({
+        json: {response}, 
+        
+    });
 });

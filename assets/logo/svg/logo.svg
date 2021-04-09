@@ -262,6 +262,216 @@
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 1.5 0 "
          result="color2" />
     </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Invert"
+       id="filter6921-0">
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 2 0 "
+         result="fbSourceGraphic"
+         id="feColorMatrix6919-3" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6961-0" />
+      <feColorMatrix
+         id="feColorMatrix6963-4"
+         type="hueRotate"
+         values="180"
+         result="color1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6965-4"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 1.5 0 "
+         result="color2" />
+    </filter>
+    <filter
+       inkscape:label="Fluorescence"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world"
+       style="color-interpolation-filters:sRGB"
+       id="filter6831-4">
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         id="feColorMatrix6825-4" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         id="feColorMatrix6827-7" />
+      <feColorMatrix
+         type="matrix"
+         values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+         id="feColorMatrix6829-6" />
+    </filter>
+    <filter
+       inkscape:label="Fluorescence"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world"
+       style="color-interpolation-filters:sRGB"
+       id="filter6839-3">
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         id="feColorMatrix6833-1" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         id="feColorMatrix6835-7" />
+      <feColorMatrix
+         type="matrix"
+         values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+         id="feColorMatrix6837-5" />
+    </filter>
+    <filter
+       inkscape:label="Refractive Glass"
+       inkscape:menu-tooltip="Double reflection through glass with some refraction"
+       inkscape:menu="Non-realistic 3D Shaders"
+       height="1.5"
+       y="-0.25"
+       width="1.5"
+       x="-0.25"
+       style="color-interpolation-filters:sRGB"
+       id="filter1976-9">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result8"
+         in="SourceGraphic"
+         id="feGaussianBlur1956-6" />
+      <feComposite
+         in="result8"
+         in2="result8"
+         operator="xor"
+         result="result18"
+         id="feComposite1958-2" />
+      <feComposite
+         k4="0"
+         k3="0"
+         in="result8"
+         k1="1"
+         k2="0.5"
+         operator="arithmetic"
+         result="result16"
+         in2="result18"
+         id="feComposite1960-1" />
+      <feComposite
+         in2="result8"
+         result="result6"
+         operator="atop"
+         in="result16"
+         id="feComposite1962-7" />
+      <feOffset
+         result="result17"
+         in="result6"
+         id="feOffset1964-8" />
+      <feDisplacementMap
+         in2="result16"
+         in="result17"
+         xChannelSelector="A"
+         yChannelSelector="A"
+         scale="100"
+         result="result4"
+         id="feDisplacementMap1966-5" />
+      <feComposite
+         k4="0"
+         k2="0"
+         k1="0"
+         in2="result4"
+         result="result2"
+         operator="arithmetic"
+         in="result17"
+         k3="1"
+         id="feComposite1968-7" />
+      <feComposite
+         in2="result17"
+         result="fbSourceGraphic"
+         in="result2"
+         operator="out"
+         id="feComposite1970-4" />
+      <feComposite
+         in="fbSourceGraphic"
+         in2="fbSourceGraphic"
+         operator="over"
+         result="result14"
+         id="feComposite1972-1" />
+      <feComposite
+         result="result15"
+         in2="SourceGraphic"
+         operator="in"
+         in="result14"
+         id="feComposite1974-8" />
+    </filter>
+    <filter
+       inkscape:label="Fluorescence"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world"
+       style="color-interpolation-filters:sRGB"
+       id="filter2089-7">
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         id="feColorMatrix2083-5" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         id="feColorMatrix2085-3" />
+      <feColorMatrix
+         type="matrix"
+         values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+         id="feColorMatrix2087-8" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1467-8"
+       x="-0.046646267"
+       width="1.0932925"
+       y="-0.024189744"
+       height="1.0483795">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.096721815"
+         id="feGaussianBlur1469-3" />
+    </filter>
+    <filter
+       inkscape:label="Fluorescence"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world"
+       style="color-interpolation-filters:sRGB"
+       id="filter2089-7-9">
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         id="feColorMatrix2083-5-2" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         id="feColorMatrix2085-3-5" />
+      <feColorMatrix
+         type="matrix"
+         values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+         id="feColorMatrix2087-8-4" />
+    </filter>
+    <filter
+       inkscape:label="Fluorescence"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world"
+       style="color-interpolation-filters:sRGB"
+       id="filter6839-3-2">
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         id="feColorMatrix6833-1-4" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         id="feColorMatrix6835-7-7" />
+      <feColorMatrix
+         type="matrix"
+         values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+         id="feColorMatrix6837-5-7" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -270,18 +480,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.95330254"
-     inkscape:cx="280.60336"
-     inkscape:cy="794.49592"
+     inkscape:zoom="0.31466432"
+     inkscape:cx="-1132.6319"
+     inkscape:cy="51.350973"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1043"
+     inkscape:window-height="1016"
      inkscape:window-x="1920"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-y="1107"
+     inkscape:window-maximized="1"
+     inkscape:snap-text-baseline="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -470,5 +682,214 @@
          x="61.791016"
          y="72.642952"
          style="fill:#420000;fill-opacity:1;stroke-width:0.10785092">S</tspan></text>
+    <g
+       id="g1555-18"
+       style="filter:url(#filter2089-7)"
+       transform="matrix(2.6806112,0,0,3.6777792,-73.461044,-45.095442)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png">
+      <rect
+         ry="1.453429"
+         y="77.838989"
+         x="42.228584"
+         height="28.865108"
+         width="38.754082"
+         id="rect815-9"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.26458332"
+         rx="1.9940941" />
+      <text
+         transform="matrix(0.59189239,0,0,0.59189239,18.010961,33.327337)"
+         id="text834-6"
+         y="89.331573"
+         x="45.703091"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#53fef9;fill-opacity:1;stroke:none;stroke-width:0.26458332;filter:url(#filter1467-8)"
+         xml:space="preserve"><tspan
+           style="fill:#53fef9;fill-opacity:1;stroke-width:0.26458332"
+           y="89.331573"
+           x="45.703091"
+           id="tspan832-4"
+           sodipodi:role="line">$</tspan></text>
+      <rect
+         ry="0"
+         rx="0"
+         y="81.862801"
+         x="49.616997"
+         height="4.9565816"
+         width="2.7159352"
+         id="rect1475-3"
+         style="fill:#53fef9;fill-opacity:1;stroke-width:0.21845187" />
+    </g>
+    <g
+       id="g6443-8"
+       transform="matrix(3.3262221,0,0,3.3262221,-37.218369,64.600172)"
+       style="opacity:0.85;filter:url(#filter6831-4)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png">
+      <path
+         inkscape:transform-center-y="-0.5820696"
+         inkscape:transform-center-x="-0.019776703"
+         d="m 43.194064,71.3452 -2.075675,0.03425 -2.075674,0.03425 1.008174,-1.814713 1.008174,-1.814712 1.0675,1.78046 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.5542961"
+         sodipodi:arg1="0.5070985"
+         sodipodi:r2="1.1985542"
+         sodipodi:r1="2.3971086"
+         sodipodi:cy="70.181061"
+         sodipodi:cx="41.098614"
+         sodipodi:sides="3"
+         id="path2716-9-9"
+         style="opacity:1;fill:#53fef9;fill-opacity:1;stroke-width:0.06242375"
+         sodipodi:type="star" />
+      <rect
+         ry="0"
+         rx="0"
+         y="70.200462"
+         x="40.487812"
+         height="6.3445559"
+         width="1.2611502"
+         id="rect2718-7-7"
+         style="opacity:1;fill:#53fef9;fill-opacity:1;stroke-width:0.06242375" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.09612179px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.30240303"
+       x="68.142494"
+       y="269.37375"
+       id="text6899-7"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png"><tspan
+         sodipodi:role="line"
+         id="tspan6897-6"
+         x="68.142494"
+         y="269.37375"
+         style="fill:#53fef9;fill-opacity:1;stroke-width:0.30240303">ocketee</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.31403685px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#420000;fill-opacity:1;stroke:none;stroke-width:0.10785092;filter:url(#filter6921-0)"
+       x="61.791016"
+       y="72.642952"
+       id="text6899-5-4"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       transform="matrix(2.8038986,0,0,2.8038986,-114.03013,65.488222)"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png"><tspan
+         sodipodi:role="line"
+         id="tspan6897-3-3"
+         x="61.791016"
+         y="72.642952"
+         style="fill:#420000;fill-opacity:1;stroke-width:0.10785092">S</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#030f89;fill-opacity:1;stroke:#0042ff;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.74062502"
+       id="path1069"
+       sodipodi:sides="3"
+       sodipodi:cx="-292.74939"
+       sodipodi:cy="210.57388"
+       sodipodi:r1="109.86861"
+       sodipodi:r2="127.98243"
+       sodipodi:arg1="1.2254062"
+       sodipodi:arg2="-0.66494467"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -255.55186,313.95403 63.51836,-182.3473 -208.84449,59.49109 126.15822,146.18216 52.90145,-210.61018 -189.67658,36.16514 z"
+       inkscape:transform-center-x="18.598761"
+       inkscape:transform-center-y="9.7380308"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g6447-4"
+       transform="matrix(-4.2486721,4.3447157,-3.8503483,-3.7652329,95.834684,430.72809)"
+       style="opacity:1;fill:#ffffff;filter:url(#filter6839-3)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png">
+      <path
+         inkscape:transform-center-y="-0.5820696"
+         inkscape:transform-center-x="-0.014076851"
+         d="m 25.716349,75.754234 -2.075674,0.03425 -2.075675,0.03425 1.008174,-1.814713 1.008174,-1.814713 1.0675,1.780461 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.5542961"
+         sodipodi:arg1="0.5070985"
+         sodipodi:r2="1.1985542"
+         sodipodi:r1="2.3971086"
+         sodipodi:cy="74.590096"
+         sodipodi:cx="23.620899"
+         sodipodi:sides="3"
+         id="path2716-8"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.06242375"
+         sodipodi:type="star"
+         transform="matrix(1,0,0,0.71174898,-0.10690374,20.809796)" />
+      <rect
+         ry="0"
+         rx="0"
+         y="74.609497"
+         x="22.819567"
+         height="13.807757"
+         width="1.4284109"
+         id="rect2718-8"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.09800631" />
+      <path
+         inkscape:transform-center-y="-0.5820696"
+         inkscape:transform-center-x="0.014074254"
+         d="m 25.716349,75.754234 -2.075674,0.03425 -2.075675,0.03425 1.008174,-1.814713 1.008174,-1.814713 1.0675,1.780461 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.5542961"
+         sodipodi:arg1="0.5070985"
+         sodipodi:r2="1.1985542"
+         sodipodi:r1="2.3971086"
+         sodipodi:cy="74.590096"
+         sodipodi:cx="23.620899"
+         sodipodi:sides="3"
+         id="path2716-8-2"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.06242375;filter:url(#filter6839-3)"
+         sodipodi:type="star"
+         transform="matrix(1,0,0,-0.71174899,-5.2555522,139.81093)" />
+      <rect
+         transform="matrix(0.05345187,0,0,-0.06031485,16.309455,72.203464)"
+         ry="0"
+         rx="0"
+         y="-228.92798"
+         x="25.470951"
+         height="228.92798"
+         width="26.723309"
+         id="rect2718-8-89"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:1.72607803;filter:url(#filter6839-3)" />
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.990625"
+       id="path1048"
+       transform="rotate(36.017455)"
+       r="12.534018"
+       cy="353.17221"
+       cx="-114.24499"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.06700134px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.45167482"
+       x="-281.97357"
+       y="202.70476"
+       id="text1161"
+       transform="rotate(0.00248719)"
+       inkscape:export-filename="/home/gp2/Documentos/socketee/assets/icons/png/512x512.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan1159"
+         x="-281.97357"
+         y="202.70476"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.06700134px;line-height:9.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:1.45167482">S</tspan></text>
   </g>
 </svg>

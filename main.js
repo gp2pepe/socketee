@@ -8,7 +8,7 @@ let win
 function createWindow () {
    win = new BrowserWindow({
     width: 600,
-    height: 840,
+    height: 820,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
