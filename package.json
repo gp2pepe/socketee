@@ -5,7 +5,7 @@
   "description": "Small electron app to test Websocket as a client",
   "main": "main.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "electron .",
     "dist": "electron-builder --linux snap",
     "package": "electron-forge package",
     "make": "electron-forge make"
