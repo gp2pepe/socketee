@@ -16,7 +16,7 @@ function createWindow () {
     },
     icon: path.join(__dirname, 'assets/icons/png/64x64.png')
   })
-  win.setMenuBarVisibility(false)
+  win.setMenuBarVisibility(true)
   win.loadFile('index.html')
 }
 
