@@ -6,6 +6,8 @@ Small electron app to test Websocket as a client
   <img alt="socketee" src="https://snapcraft.io/socketee/badge.svg" />
 </a>
 
+<a href="https://www.paypal.com/donate?hosted_button_id=EZG9K3FD24N9Q" target="_blank"> <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"> </a>
+
 <h3>Build - Test</h3>
 npm install <br>
 npm start
