@@ -28,6 +28,8 @@
     "electron-builder": "^22.10.5"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^4.6.0",
     "electron-squirrel-startup": "^1.0.0",
     "jquery": "^3.6.0",
     "ws": "^7.4.4"
