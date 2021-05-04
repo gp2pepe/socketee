@@ -4,6 +4,10 @@ require('./lib/jquery.jsonPresenter.js');
 
 let connMessage = document.querySelector('#state-con');
 
+ipc.send('loadSaved',"");
+
+
+
 document.getElementById('btnConnect').addEventListener('click', function(e){
     ipc.send('connect',document.getElementById('url').value);
 
@@ -35,4 +39,13 @@ ipc.on('responseMessage', (event, args) => {
         json: {response}, 
         
     });
+});
+
+ipc.on('responseSavedURL', (event, args) => {
+    document.getElementById('url').value = args;
+});
+
+document.getElementById('saveURL').addEventListener('click', function(e){
+    ipc.send('saveURL',document.getElementById('url').value);
+
 });

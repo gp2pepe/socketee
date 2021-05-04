@@ -10,7 +10,7 @@
     <!-- Bootstrap Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script>let $ = require('jquery');</script>
-    <script>require('popper.js');</script>
+    <script>require("popper.js"); </script>
     <script>require('bootstrap');</script>
     <link rel="stylesheet" href="./lib/jquery.jsonPresenter.css">
 
@@ -23,15 +23,11 @@
       #divForm {
         border: 5px solid #f1f1f1;
       }
-      .iconSave{
-        height: 48px;
-        margin: 8px 0 0 8px;
-        float: right;
-      }
+
       input[type=text], input[type=password] {
         width: 100%;
         padding: 16px 8px;
-        margin: 8px -50px 0 0;
+        margin: 8px 0;
         display: inline-block;
         border: 1px solid #ccc;
         box-sizing: border-box;
@@ -136,8 +132,8 @@
             <div class="col">
               <input type="text" placeholder="Example: localhost:8080/websocket" name="url" id="url" required>
             </div>
-            <div class="col">
-              <img src="assets/icons/png/save64x64.png" alt="Save" class="iconSave">
+            <div class="col-1 align-middle d-flex align-items-end" style="height: 62px;">
+              <img  src="assets/icons/png/save48x48.png" alt="Save" id="saveURL">
             </div>
           </div
         </div>

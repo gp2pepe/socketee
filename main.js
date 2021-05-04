@@ -1,13 +1,15 @@
 "use strict";
-const { app, BrowserWindow, ipcMain } = require('electron')
-const path = require('path')
-const WebSocket = require('ws')
+const { app, BrowserWindow, ipcMain } = require('electron');
+const path = require('path');
+const WebSocket = require('ws');
+const settings = require('electron-settings');
+
 var client 
 let win
 
 function createWindow () {
    win = new BrowserWindow({
-    width: 600,
+    width: 650,
     height: 820,
     webPreferences: {
       nodeIntegration: true,
@@ -55,6 +57,35 @@ ipcMain.on('send', (event,args) => {
     }
 });
 
+ipcMain.on('saveURL', (event,args) => {
+
+  try{
+    console.log('Sample Text Entered - ' + args);
+    console.log('Persisting Data in electron-settings');
+  
+    settings.set('key', {
+        data: args
+    });
+  }catch (error){
+    win.webContents.send('responseMessage',"Error saving file: " + error);
+  }
+});
+
+ipcMain.on('loadSaved', (event,args) => {
+
+  try{
+  
+      settings.has('key.data').then(bool => {
+        settings.get('key.data').then(value => {
+          console.log('Persisted Value - ' + value);
+          win.webContents.send('responseSavedURL',value);
+        })
+      });
+
+  }catch (error){
+    win.webContents.send('responseMessage',"Error opening file: " + error);
+  }
+});
 
 app.whenReady().then(() => {
   
