@@ -49,3 +49,18 @@ document.getElementById('saveURL').addEventListener('click', function(e){
     ipc.send('saveURL',document.getElementById('url').value);
 
 });
+
+ipc.on('responseSave', (event, args) => {
+    
+    let saveUrlMessage = document.querySelector('#state-save-url');
+    if(args!="Error"){
+        saveUrlMessage.style.color = "green";
+    }else{
+        saveUrlMessage.style.color = "crimson";
+    }
+    saveUrlMessage.innerHTML = args;
+
+    setTimeout(function (){
+        saveUrlMessage.innerHTML = "&nbsp;";
+    },1500);
+});

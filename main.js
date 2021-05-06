@@ -60,14 +60,12 @@ ipcMain.on('send', (event,args) => {
 ipcMain.on('saveURL', (event,args) => {
 
   try{
-    console.log('Sample Text Entered - ' + args);
-    console.log('Persisting Data in electron-settings');
-  
     settings.set('key', {
-        data: args
+        url: args
     });
+    win.webContents.send('responseSave','Saved');
   }catch (error){
-    win.webContents.send('responseMessage',"Error saving file: " + error);
+    win.webContents.send('responseSave',"Error");
   }
 });
 
@@ -75,15 +73,15 @@ ipcMain.on('loadSaved', (event,args) => {
 
   try{
   
-      settings.has('key.data').then(bool => {
-        settings.get('key.data').then(value => {
-          console.log('Persisted Value - ' + value);
-          win.webContents.send('responseSavedURL',value);
+      settings.has('key.url').then(bool => {
+        settings.get('key.url').then(value => {
+          if(value!=undefined)
+            win.webContents.send('responseSavedURL',value);
         })
       });
 
   }catch (error){
-    win.webContents.send('responseMessage',"Error opening file: " + error);
+    win.webContents.send('responseSave',"Error");
   }
 });
 

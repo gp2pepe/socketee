@@ -14,12 +14,34 @@ architectures:
   - build-on: amd64
 
 apps:
-  part-os-release:
-    command: npm start
- 
+  socketee:
+    command: socketee/socketee --no-sandbox
+    extensions: [gnome-3-34]
+    plugs:
+    - browser-support
+    - network
+    - network-bind
+    environment:
+      # Correct the TMPDIR path for Chromium Framework/Electron to ensure
+      # libappindicator has readable resources.
+      TMPDIR: $XDG_RUNTIME_DIR
+
+
 parts:
   socketee:
-    plugin: nodejs
-    node-packages:
-     - electron
+    plugin: nil
     source: .
+    override-build: |
+        node -v
+        npm -v
+        npm install electron --scripts-prepend-node-path
+        npm electron-packager --scripts-prepend-node-path
+        npx electron-packager . --overwrite --platform=linux --output=release-build --prune=true
+        cp -rv ./socketee-linux-* $SNAPCRAFT_PART_INSTALL/socketee
+    build-snaps:
+    - node/14/stable
+    build-packages:
+    - unzip
+    stage-packages:
+    - libnss3
+    - libnspr4
