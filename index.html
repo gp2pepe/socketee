@@ -136,7 +136,7 @@
               <img  src="assets/icons/png/save48x48.png" alt="Save" id="saveURL">
             </div>          
           </div>
-          <div id="state-save-url" style="text-align: right;">
+          <div id="state-save-url" style="text-align: right;font-weight: bold;">
             &nbsp;
           </div>
         </div>
@@ -146,7 +146,17 @@
           <label for="Connection_State">Connection State: </label>
           <span id="state-con">Not connected</span>
           <br><br>
-          <label for="text"><strong>Text to send</strong></label><br>
+          <div class="row align-items-start align-middle">
+            <div class="col" style="height: 62px;line-height: 62px;">
+              <label for="text"><strong>Text to send</strong></label>
+            </div>
+            <div class="col-1 align-middle d-flex align-items-end" style="height: 62px;">
+              <img  src="assets/icons/png/save48x48.png" alt="Save" id="saveText">
+            </div>          
+          </div>
+          <div id="state-save-text" style="text-align: right;font-weight: bold;">
+            &nbsp;
+          </div>
           <textarea id="textSend"
 placeholder='Message to send - JSon Example:
 {
