@@ -133,7 +133,7 @@
               <input type="text" placeholder="Example: localhost:8080/websocket" name="url" id="url" required>
             </div>
             <div class="col-1 align-middle d-flex align-items-end" style="height: 62px;">
-              <img  src="assets/icons/png/save48x48.png" alt="Save" id="saveURL">
+              <img  src="assets/icons/png/save48x48.png" alt="Save" id="saveURL" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Save URL">
             </div>          
           </div>
           <div id="state-save-url" style="text-align: right;font-weight: bold;">
@@ -148,13 +148,13 @@
           <br><br>
           <div class="row align-items-start align-middle">
             <div class="col" style="height: 62px;line-height: 62px;">
-              <label for="text"><strong>Text to send</strong></label>
+              <label for="text"><strong>Text payload to send</strong></label>
             </div>
             <div class="col-1 align-middle d-flex align-items-end" style="height: 56px;">
-              <img  src="assets/icons/png/save48x48.png" alt="Save" id="saveText">
+              <img  src="assets/icons/png/save48x48.png" alt="Save" id="saveText" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Save payload">
             </div>          
           </div>
-          <div id="state-save-text" style="text-align: right;font-weight: bold;">
+          <div id="state-save-text" style="text-align: right;font-weight: bold;"  >
             &nbsp;
           </div>
           <textarea id="textSend"
