@@ -10,7 +10,7 @@ let win
 function createWindow () {
    win = new BrowserWindow({
     width: 650,
-    height: 820,
+    height: 850,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -18,7 +18,7 @@ function createWindow () {
     },
     icon: path.join(__dirname, 'assets/icons/png/64x64.png')
   })
-  win.setMenuBarVisibility(true)
+  win.setMenuBarVisibility(false)
   win.loadFile('index.html')
 }
 
@@ -60,8 +60,8 @@ ipcMain.on('send', (event,args) => {
 ipcMain.on('saveURL', (event,args) => {
 
   try{
-    settings.set('key', {
-        url: args
+    settings.set('url', {
+        0: args
     });
     win.webContents.send('responseSave','Saved');
   }catch (error){
@@ -69,14 +69,33 @@ ipcMain.on('saveURL', (event,args) => {
   }
 });
 
+ipcMain.on('saveText', (event,args) => {
+
+  try{
+    settings.set('text', {
+        0: args
+    });
+    win.webContents.send('responseSaveText','Saved');
+  }catch (error){
+    win.webContents.send('responseSaveText',"Error");
+  }
+});
+
 ipcMain.on('loadSaved', (event,args) => {
 
   try{
   
-      settings.has('key.url').then(bool => {
-        settings.get('key.url').then(value => {
+      settings.has('url.0').then(bool => {
+        settings.get('url.0').then(value => {
           if(value!=undefined)
             win.webContents.send('responseSavedURL',value);
+        })
+      });
+
+      settings.has('text.0').then(bool => {
+        settings.get('text.0').then(value => {
+          if(value!=undefined)
+            win.webContents.send('responseSavedText',value);
         })
       });
 
