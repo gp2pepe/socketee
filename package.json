@@ -1,6 +1,6 @@
 {
   "name": "socketee",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Gabriel Pérez",
   "description": "Small electron app to test Websocket as a client",
   "main": "main.js",
