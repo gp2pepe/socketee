@@ -17,4 +17,4 @@ npm run dist
 
 <h3>Image</h3>
 
-<img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_819,h_832/https://dashboard.snapcraft.io/site_media/appmedia/2021/04/Captura_de_pantalla_de_2021-04-09_16-05-01.png" alt="Socketee">
+<img src="https://dashboard.snapcraft.io/site_media/appmedia/2021/05/Screenshot_20210506_192827.png" alt="Socketee">
